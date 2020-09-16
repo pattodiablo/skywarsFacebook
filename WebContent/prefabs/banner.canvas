@@ -1,0 +1,55 @@
+{
+  "canvas-version": 2,
+  "settings": {
+    "className": "banner",
+    "sceneWidth": 640,
+    "sceneHeight": 360,
+    "generateOnSave": true,
+    "enableStepping": false,
+    "lang": "JAVA_SCRIPT",
+    "baseClass": "Phaser.Sprite",
+    "backgroundColor": [
+      180,
+      180,
+      180
+    ],
+    "gridColor": [
+      200,
+      200,
+      200
+    ],
+    "showGrid": true
+  },
+  "stateSettings": {
+    "stageBackgroundColor": [
+      0,
+      0,
+      0
+    ],
+    "autoLoad": true,
+    "preloadSprite_direction": 0,
+    "load.pack": []
+  },
+  "world": {
+    "type": "group",
+    "id": "0fc70cd7-2943-4e6e-859b-af335415846d",
+    "info": {
+      "editorName": "banner",
+      "setAll": [],
+      "children": [{
+        "type": "atlas-sprite",
+        "id": "2d82974d-e84a-4a99-b2c3-1d85b7396a25",
+        "asset": "0",
+        "info": {"editorName": "Symbol_10_instance_10000"}
+      }]
+    }
+  },
+  "type": "SPRITE",
+  "asset-table": {"0": {
+    "file": "WebContent/assets/pack.json",
+    "section": "atlas",
+    "asset": "banner",
+    "sprite": "Symbol 10 instance 10000"
+  }},
+  "prefab-table": {}
+}

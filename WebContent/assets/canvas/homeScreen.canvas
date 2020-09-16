@@ -1,0 +1,142 @@
+{
+  "canvas-version": 2,
+  "settings": {
+    "className": "homeScreen",
+    "sceneWidth": 1920,
+    "sceneHeight": 1080,
+    "generateOnSave": true,
+    "enableStepping": false,
+    "lang": "JAVA_SCRIPT",
+    "baseClass": "Phaser.State",
+    "backgroundColor": [
+      0,
+      0,
+      0
+    ],
+    "gridColor": [
+      0,
+      0,
+      0
+    ],
+    "showGrid": true,
+    "create_after": "this.myCreate();",
+    "state_preload_after": "this.myPreload();"
+  },
+  "stateSettings": {
+    "scaleMode": "SHOW_ALL",
+    "pageAlignHorizontally": true,
+    "pageAlignVertically": true,
+    "stageBackgroundColor": [
+      0,
+      0,
+      0
+    ],
+    "physicsSystem": "ARCADE",
+    "rendererRoundPixels": true,
+    "autoLoad": false,
+    "preloadSpriteId": "82f185e8-c110-493d-8a4d-12867140cf4e",
+    "preloadSprite_direction": 0,
+    "load.pack": [
+      {
+        "file": "WebContent/assets/pack.json",
+        "section": "images"
+      },
+      {
+        "file": "WebContent/assets/pack.json",
+        "section": "atlas"
+      }
+    ]
+  },
+  "world": {
+    "type": "group",
+    "id": "e26dd211-a7da-448c-a60c-f5fbc4ce2703",
+    "info": {
+      "editorName": "homeScreen",
+      "setAll": [],
+      "children": [
+        {
+          "type": "image",
+          "id": "88610612-6112-4175-9b1a-a4f1b3122036",
+          "asset": "0",
+          "info": {"editorName": "homeBg"}
+        },
+        {
+          "type": "image",
+          "id": "8cd839e3-57d8-4075-b12d-327ec36bb521",
+          "asset": "1",
+          "info": {
+            "editorName": "heroHome",
+            "editorField": true,
+            "y": 1012
+          }
+        },
+        {
+          "type": "image",
+          "id": "061649fa-8858-4ab2-8b72-ea773a016a6a",
+          "asset": "2",
+          "info": {
+            "editorName": "alsoPlay",
+            "editorField": true,
+            "x": 1667,
+            "y": 920,
+            "anchor.x": 0.5,
+            "anchor.y": 0.5
+          }
+        },
+        {
+          "type": "image",
+          "id": "82f185e8-c110-493d-8a4d-12867140cf4e",
+          "asset": "3",
+          "info": {
+            "editorName": "playBtn",
+            "editorField": true,
+            "x": 1126,
+            "y": 582,
+            "anchor.x": 0.5,
+            "anchor.y": 0.5
+          }
+        },
+        {
+          "type": "image",
+          "id": "1f004a4d-7fe4-4656-a17b-0c3d1f48118b",
+          "asset": "4",
+          "info": {
+            "editorName": "gameTitle",
+            "editorField": true,
+            "x": 600,
+            "y": -332
+          }
+        }
+      ]
+    }
+  },
+  "type": "STATE",
+  "asset-table": {
+    "0": {
+      "file": "WebContent/assets/pack.json",
+      "section": "images",
+      "asset": "homeBg"
+    },
+    "1": {
+      "file": "WebContent/assets/pack.json",
+      "section": "images",
+      "asset": "heroHome"
+    },
+    "2": {
+      "file": "WebContent/assets/pack.json",
+      "section": "images",
+      "asset": "alsoPlay"
+    },
+    "3": {
+      "file": "WebContent/assets/pack.json",
+      "section": "images",
+      "asset": "playBtn"
+    },
+    "4": {
+      "file": "WebContent/assets/pack.json",
+      "section": "images",
+      "asset": "gameTitle"
+    }
+  },
+  "prefab-table": {}
+}

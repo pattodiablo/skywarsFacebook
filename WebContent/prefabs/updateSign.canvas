@@ -1,0 +1,65 @@
+{
+  "canvas-version": 2,
+  "settings": {
+    "className": "updateSign",
+    "sceneWidth": 640,
+    "sceneHeight": 360,
+    "generateOnSave": true,
+    "enableStepping": false,
+    "lang": "JAVA_SCRIPT",
+    "baseClass": "Phaser.Sprite",
+    "backgroundColor": [
+      180,
+      180,
+      180
+    ],
+    "gridColor": [
+      200,
+      200,
+      200
+    ],
+    "showGrid": true
+  },
+  "stateSettings": {
+    "stageBackgroundColor": [
+      0,
+      0,
+      0
+    ],
+    "autoLoad": true,
+    "preloadSpriteId": "",
+    "preloadSprite_direction": 0,
+    "load.pack": []
+  },
+  "world": {
+    "type": "group",
+    "id": "bd8c51c8-ce7d-465b-a6d4-4521949eb967",
+    "info": {
+      "editorName": "updateSign",
+      "setAll": [],
+      "children": [{
+        "type": "atlas-sprite",
+        "id": "c9c723f6-3a1a-4f7a-8d34-e044a950e991",
+        "asset": "0",
+        "info": {
+          "editorName": "upgradeSign0000",
+          "anchor.x": 0.5,
+          "anchor.y": 0.5,
+          "animations": [{
+            "name": "updated",
+            "frameRate": 1,
+            "frames": ["upgradeSign0001"]
+          }]
+        }
+      }]
+    }
+  },
+  "type": "SPRITE",
+  "asset-table": {"0": {
+    "file": "WebContent/assets/pack.json",
+    "section": "atlas",
+    "asset": "buttons",
+    "sprite": "upgradeSign0000"
+  }},
+  "prefab-table": {}
+}

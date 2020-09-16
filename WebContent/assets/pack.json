@@ -1,0 +1,418 @@
+{
+  "images": [
+    {
+      "type": "image",
+      "key": "background",
+      "url": "assets/images/background.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "building1",
+      "url": "assets/images/building1.png",
+      "overwrite": false
+    },
+    {
+      "type": "script",
+      "key": "building11",
+      "url": "prefabs/building1.js"
+    },
+    {
+      "type": "script",
+      "key": "banner1",
+      "url": "prefabs/banner.js"
+    },
+    {
+      "type": "image",
+      "key": "buildings",
+      "url": "assets/images/buildings.png",
+      "overwrite": false
+    },
+    {
+      "type": "script",
+      "key": "BgBuildings",
+      "url": "prefabs/BgBuildings.js"
+    },
+    {
+      "type": "image",
+      "key": "core1",
+      "url": "assets/images/core1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "core2",
+      "url": "assets/images/core2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "core3",
+      "url": "assets/images/core3.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "core4",
+      "url": "assets/images/core4.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "building2",
+      "url": "assets/images/building2.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "building3",
+      "url": "assets/images/building3.png",
+      "overwrite": false
+    },
+    {
+      "type": "script",
+      "key": "building21",
+      "url": "prefabs/building2.js"
+    },
+    {
+      "type": "script",
+      "key": "building31",
+      "url": "prefabs/building3.js"
+    },
+    {
+      "type": "image",
+      "key": "coin1",
+      "url": "assets/images/coin.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "menuBg",
+      "url": "assets/images/menuBg.png",
+      "overwrite": false
+    },
+    {
+      "type": "script",
+      "key": "menuBg1",
+      "url": "prefabs/menuBg.js"
+    },
+    {
+      "type": "image",
+      "key": "deployBtn",
+      "url": "assets/images/deployBtn.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "userPic",
+      "url": "assets/images/userPic.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "menuCoin",
+      "url": "assets/images/menuCoin.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "levelBg",
+      "url": "assets/images/levelBg.png",
+      "overwrite": false
+    },
+    {
+      "type": "script",
+      "key": "levelBar",
+      "url": "prefabs/levelBar.js"
+    },
+    {
+      "type": "image",
+      "key": "enemyLeg",
+      "url": "assets/images/enemyLeg.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "enemyShip",
+      "url": "assets/images/enemyShip.png",
+      "overwrite": false
+    },
+    {
+      "type": "script",
+      "key": "alienEnemy",
+      "url": "prefabs/alienEnemy.js"
+    },
+    {
+      "type": "image",
+      "key": "alienWindow",
+      "url": "assets/images/alienWindow.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "enemyBar",
+      "url": "assets/images/enemyBar.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "enemyLife",
+      "url": "assets/images/enemyLife.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "enemyLifeFull",
+      "url": "assets/images/enemyLifeFull.png",
+      "overwrite": false
+    },
+    {
+      "type": "script",
+      "key": "enemyLifeBar",
+      "url": "prefabs/enemyLifeBar.js"
+    },
+    {
+      "type": "script",
+      "key": "barraSalva",
+      "url": "prefabs/barraSalva.js"
+    },
+    {
+      "type": "script",
+      "key": "homeScreen",
+      "url": "assets/canvas/homeScreen.js"
+    },
+    {
+      "type": "image",
+      "key": "homeBg",
+      "url": "assets/images/homeBg.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "alsoPlay",
+      "url": "assets/images/alsoPlay.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "gameTitle",
+      "url": "assets/images/gameTitle.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "heroHome",
+      "url": "assets/images/heroHome.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "playBtn",
+      "url": "assets/images/playBtn.png",
+      "overwrite": false
+    },
+    {
+      "type": "script",
+      "key": "finalScreen",
+      "url": "assets/canvas/finalScreen.js"
+    },
+    {
+      "type": "image",
+      "key": "finalBg",
+      "url": "assets/images/finalBg.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "finalBuildings",
+      "url": "assets/images/finalBuildings.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "finalHero",
+      "url": "assets/images/finalHero.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "finalMessage",
+      "url": "assets/images/finalMessage.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "finalPlayBtn",
+      "url": "assets/images/finalPlayBtn.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "finalRedLine",
+      "url": "assets/images/finalRedLine.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "finalRoof",
+      "url": "assets/images/finalRoof.png",
+      "overwrite": false
+    }
+  ],
+  "atlas": [
+    {
+      "type": "atlas",
+      "key": "player",
+      "textureURL": "assets/atlas/player.png",
+      "atlasURL": "assets/atlas/player.xml",
+      "format": "TEXTURE_ATLAS_XML_STARLING"
+    },
+    {
+      "type": "script",
+      "key": "player1",
+      "url": "prefabs/player.js"
+    },
+    {
+      "type": "atlas",
+      "key": "banner",
+      "textureURL": "assets/atlas/banner.png",
+      "atlasURL": "assets/atlas/banner.xml",
+      "format": "TEXTURE_ATLAS_XML_STARLING"
+    },
+    {
+      "type": "atlas",
+      "key": "wisherEnemy",
+      "textureURL": "assets/atlas/wisherEnemy.png",
+      "atlasURL": "assets/atlas/wisherEnemy.xml",
+      "format": "TEXTURE_ATLAS_XML_STARLING"
+    },
+    {
+      "type": "script",
+      "key": "wisherEnemy1",
+      "url": "prefabs/wisherEnemy.js"
+    },
+    {
+      "type": "script",
+      "key": "kickPower",
+      "url": "prefabs/kickPower.js"
+    },
+    {
+      "type": "atlas",
+      "key": "powerUps",
+      "textureURL": "assets/atlas/powerUps.png",
+      "atlasURL": "assets/atlas/powerUps.xml",
+      "format": "TEXTURE_ATLAS_XML_STARLING"
+    },
+    {
+      "type": "script",
+      "key": "powerUp1",
+      "url": "prefabs/powerUp1.js"
+    },
+    {
+      "type": "script",
+      "key": "coin",
+      "url": "prefabs/coin.js"
+    },
+    {
+      "type": "script",
+      "key": "powerUp2",
+      "url": "prefabs/powerUp2.js"
+    },
+    {
+      "type": "script",
+      "key": "speedPower",
+      "url": "prefabs/speedPower.js"
+    },
+    {
+      "type": "script",
+      "key": "jumpPower",
+      "url": "prefabs/jumpPower.js"
+    },
+    {
+      "type": "script",
+      "key": "shot",
+      "url": "prefabs/shot.js"
+    },
+    {
+      "type": "script",
+      "key": "powerUp3",
+      "url": "prefabs/powerUp3.js"
+    },
+    {
+      "type": "atlas",
+      "key": "buttons",
+      "textureURL": "assets/atlas/buttons.png",
+      "atlasURL": "assets/atlas/buttons.xml",
+      "format": "TEXTURE_ATLAS_XML_STARLING"
+    },
+    {
+      "type": "script",
+      "key": "upgradeBtn",
+      "url": "prefabs/upgradeBtn.js"
+    },
+    {
+      "type": "script",
+      "key": "updateSign",
+      "url": "prefabs/updateSign.js"
+    },
+    {
+      "type": "script",
+      "key": "updateBtn",
+      "url": "prefabs/updateBtn.js"
+    },
+    {
+      "type": "script",
+      "key": "expLabel",
+      "url": "prefabs/expLabel.js"
+    },
+    {
+      "type": "script",
+      "key": "LevelBarGlow",
+      "url": "prefabs/LevelBarGlow.js"
+    },
+    {
+      "type": "script",
+      "key": "musicBtn",
+      "url": "prefabs/musicBtn.js"
+    },
+    {
+      "type": "script",
+      "key": "FxBtn",
+      "url": "prefabs/FxBtn.js"
+    },
+    {
+      "type": "atlas",
+      "key": "alienHead",
+      "textureURL": "assets/atlas/alienHead.png",
+      "atlasURL": "assets/atlas/alienHead.xml",
+      "format": "TEXTURE_ATLAS_XML_STARLING"
+    },
+    {
+      "type": "script",
+      "key": "alienHead1",
+      "url": "prefabs/alienHead.js"
+    },
+    {
+      "type": "script",
+      "key": "shipTurbo",
+      "url": "prefabs/shipTurbo.js"
+    },
+    {
+      "type": "script",
+      "key": "fireBall",
+      "url": "prefabs/fireBall.js"
+    },
+    {
+      "type": "script",
+      "key": "explotion",
+      "url": "prefabs/explotion.js"
+    }
+  ],
+  "meta": {
+    "generated": "1599758297036",
+    "app": "Phaser Editor",
+    "url": "http://phasereditor.boniatillo.com",
+    "version": "1.0",
+    "copyright": "Arian Fornaris (c) 2015,2016"
+  }
+}

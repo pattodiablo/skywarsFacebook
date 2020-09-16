@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="alienHead.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Symbol 1 instance 10000" x="1" y="1" width="205" height="346" pivotX="100.7" pivotY="172.4" frameX="0" frameY="0" frameWidth="221" frameHeight="346"/>
+	<SubTexture name="Symbol 1 instance 10001" x="207" y="1" width="221" height="346"/>
+	<SubTexture name="Symbol 4 instance 10000" x="429" y="1" width="267" height="266" pivotX="133.05" pivotY="133.05"/>
+	<SubTexture name="Symbol 4 instance 10001" x="697" y="1" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10002" x="965" y="1" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10003" x="1233" y="1" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10004" x="1501" y="1" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10005" x="1769" y="1" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10006" x="1" y="348" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10007" x="269" y="348" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10008" x="537" y="348" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10009" x="805" y="348" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10010" x="1073" y="348" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10011" x="1341" y="348" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10012" x="1609" y="348" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10013" x="1" y="615" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10014" x="269" y="615" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10015" x="537" y="615" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10016" x="805" y="615" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10017" x="1073" y="615" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10018" x="1341" y="615" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10019" x="1609" y="615" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10020" x="1" y="882" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10021" x="269" y="882" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10022" x="537" y="882" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10023" x="805" y="882" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10024" x="1073" y="882" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10025" x="1341" y="882" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10026" x="1609" y="882" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10027" x="1" y="1149" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10028" x="269" y="1149" width="267" height="266"/>
+	<SubTexture name="Symbol 4 instance 10029" x="537" y="1149" width="267" height="266"/>
+	<SubTexture name="attack0000" x="805" y="1149" width="249" height="411" pivotX="123.85" pivotY="204.75"/>
+	<SubTexture name="blink0000" x="1055" y="1149" width="249" height="411" pivotX="123.85" pivotY="204.75"/>
+	<SubTexture name="blink0001" x="1305" y="1149" width="249" height="411"/>
+	<SubTexture name="blink0002" x="1555" y="1149" width="249" height="411"/>
+	<SubTexture name="blink0003" x="1" y="1561" width="249" height="411"/>
+	<SubTexture name="blink0004" x="251" y="1561" width="249" height="411"/>
+	<SubTexture name="blink0005" x="501" y="1561" width="249" height="411"/>
+	<SubTexture name="blink0006" x="751" y="1561" width="249" height="411"/>
+	<SubTexture name="blink0007" x="1001" y="1561" width="249" height="411"/>
+	<SubTexture name="blink0008" x="1251" y="1561" width="249" height="411"/>
+	<SubTexture name="blink0009" x="1501" y="1561" width="249" height="411"/>
+	<SubTexture name="explotion0000" x="1" y="1973" width="324" height="325" pivotX="159.3" pivotY="164.5"/>
+	<SubTexture name="explotion0001" x="326" y="1973" width="324" height="325"/>
+	<SubTexture name="explotion0002" x="651" y="1973" width="324" height="325"/>
+	<SubTexture name="explotion0003" x="976" y="1973" width="324" height="325"/>
+	<SubTexture name="explotion0004" x="1301" y="1973" width="324" height="325"/>
+	<SubTexture name="explotion0005" x="1626" y="1973" width="324" height="325"/>
+	<SubTexture name="explotion0006" x="1" y="2299" width="324" height="325"/>
+	<SubTexture name="explotion0007" x="326" y="2299" width="324" height="325"/>
+	<SubTexture name="explotion0008" x="651" y="2299" width="324" height="325"/>
+	<SubTexture name="explotion0009" x="976" y="2299" width="324" height="325"/>
+	<SubTexture name="explotion0010" x="1301" y="2299" width="324" height="325"/>
+	<SubTexture name="explotion0011" x="1626" y="2299" width="324" height="325"/>
+	<SubTexture name="explotion0012" x="1" y="2625" width="324" height="325"/>
+	<SubTexture name="explotion0013" x="326" y="2625" width="324" height="325"/>
+	<SubTexture name="explotion0014" x="651" y="2625" width="324" height="325"/>
+	<SubTexture name="hurt0000" x="976" y="2625" width="249" height="411" pivotX="123.85" pivotY="204.75"/>
+	<SubTexture name="idle0000" x="1226" y="2625" width="249" height="411" pivotX="123.85" pivotY="204.75"/>
+</TextureAtlas>
