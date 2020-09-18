@@ -143,14 +143,14 @@ menuBg.prototype.myCreate =  function(){
 
 	this.menuIsOpen =  false;
 	this.myIniYPos =  this.y;
-	this.core1BaseCost = 100;
-
-
-	this.core2BaseCost = 200;
-
-
-	this.core3BaseCost = 300;
 	
+	this.core1BaseCost = 0;
+	this.core2BaseCost = 0;
+	this.core3BaseCost = 0;
+
+	this.core1Base = 100;
+	this.core2Base = 200;
+	this.core3Base = 300;
 	
 	this.fCore1UpdateBtn.inputEnabled = true;
 	this.fCore1UpdateBtn.events.onInputDown.add(this.updateCore1, this);
@@ -181,8 +181,9 @@ this.fResetText.text = 'ok RESET?';
 	var core1Level = 0;
 	var core2Level = 0;
 	var core3Level = 0;
+	var timesDefeated = 0;
 	
-	this.game.state.getCurrentState().saveProgress(coins,level,core1Level,core2Level,core3Level,this.game,true);
+	this.game.state.getCurrentState().resetProgress(coins,level,core1Level,core2Level,core3Level,this.game,true,timesDefeated);
 	}
 
 }
@@ -197,31 +198,27 @@ this.fResetText.text = 'RESET ALL';
 
 	if(!this.menuFirstOpen){
 
+		this.menuFirstOpen = true;
 
-	this.menuFirstOpen = true;
+		for(var i = 0; i<this.game.state.getCurrentState().fPlayer.core1Level; i++){
+			this.fUpgradeSign1.frame++;
+			this.core1Base +=this.core1Base*0.3;
+		} 
+		for(var i = 0; i<this.game.state.getCurrentState().fPlayer.core2Level; i++){
+			this.fUpgradeSign2.frame++;
+			this.core2Base +=this.core2Base*0.3;
+		}	
+		for(var i = 0; i<this.game.state.getCurrentState().fPlayer.core3Level; i++){
+			this.fUpgradeSign3.frame++;
+			this.core3Base +=this.core3Base*0.3;
+		} 
 
-	for(var i = 0; i<this.game.state.getCurrentState().fPlayer.core1Level; i++){
-		this.fUpgradeSign1.frame++;
-		this.core1BaseCost += this.core1BaseCost *this.game.state.getCurrentState().fPlayer.myLevel*0.2;
-
+		
 	}
+	this.core1BaseCost = Math.round(this.core1Base+(this.core1Base*this.game.state.getCurrentState().fPlayer.myLevel*0.2));
+		this.core2BaseCost = Math.round(this.core2Base+(this.core2Base*this.game.state.getCurrentState().fPlayer.myLevel*0.2));
+		this.core3BaseCost = Math.round(this.core3Base+(this.core3Base*this.game.state.getCurrentState().fPlayer.myLevel*0.2));
 
-
-	for(var i = 0; i<this.game.state.getCurrentState().fPlayer.core2Level; i++){
-
-		this.fUpgradeSign2.frame++;
-		this.core2BaseCost += this.core2BaseCost *this.game.state.getCurrentState().fPlayer.myLevel*0.2;
-	}
-
-
-	for(var i = 0; i<this.game.state.getCurrentState().fPlayer.core3Level; i++){
-
-		this.fUpgradeSign3.frame++;
-		this.core3BaseCost += this.core3BaseCost *this.game.state.getCurrentState().fPlayer.myLevel*0.2;
-	}
-
-
-	}
 }
 
 menuBg.prototype.updateCore1 =  function(){
@@ -234,11 +231,17 @@ menuBg.prototype.updateCore1 =  function(){
 				upgrade.play('upgrade');
 			this.fUpgradeSign1.frame++;
 			this.game.state.getCurrentState().fPlayer.coins -= this.core1BaseCost;
-			this.core1BaseCost += Math.round(this.core1BaseCost*this.game.state.getCurrentState().fPlayer.myLevel*0.2);
+
+			console.log('antes ' + this.core1BaseCost + 'core1Base: '+ this.core1Base);
+
+			this.core1Base +=this.core1Base*0.3;
+
+			this.core1BaseCost = Math.round(this.core1Base+(this.core1Base*this.game.state.getCurrentState().fPlayer.myLevel*0.2));
+			console.log('despues ' + this.core1BaseCost);
 			
 			this.game.state.getCurrentState().fPlayer.core1Level++;	
 			this.game.state.getCurrentState().shakeAndFlash();
-			
+			this.fCore1cost.text = this.core1BaseCost;
 		}else{
 
 			this.fCore1cost.text = 'xxx';
@@ -250,18 +253,23 @@ menuBg.prototype.updateCore1 =  function(){
 
 menuBg.prototype.updateCore2 =  function(){
 
-	if(this.game.state.getCurrentState().fPlayer.coins>=this.core2BaseCost){
+	if(this.game.state.getCurrentState().fPlayer.coins>=this.core2Base){
 
 
 		if(this.game.state.getCurrentState().fPlayer.core2Level<4){
 			upgrade.play('upgrade');
 			this.fUpgradeSign2.frame++;
 			this.game.state.getCurrentState().fPlayer.coins -= this.core2BaseCost;
-			this.core2BaseCost += Math.round(this.core2BaseCost*this.game.state.getCurrentState().fPlayer.myLevel*0.2);
+			
+			this.core2Base +=this.core2Base*0.3;
+
+			this.core2BaseCost = Math.round(this.core2Base+(this.core2Base*this.game.state.getCurrentState().fPlayer.myLevel*0.2));
+			
 			
 			this.game.state.getCurrentState().fPlayer.core2Level++;	
 			this.game.state.getCurrentState().shakeAndFlash();
-			
+
+			this.fCore2cost.text = this.core2BaseCost;
 		}else{
 
 			this.fCore2cost.text = 'xxx';
@@ -273,18 +281,22 @@ menuBg.prototype.updateCore2 =  function(){
 
 menuBg.prototype.updateCore3 =  function(){
 
-	if(this.game.state.getCurrentState().fPlayer.coins>=this.core3BaseCost){
+	if(this.game.state.getCurrentState().fPlayer.coins>=this.core3Base){
 
 
 		if(this.game.state.getCurrentState().fPlayer.core3Level<4){
 				upgrade.play('upgrade');
 			this.fUpgradeSign3.frame++;
 			this.game.state.getCurrentState().fPlayer.coins -= this.core3BaseCost;
-			this.core3BaseCost += Math.round(this.core3BaseCost*this.game.state.getCurrentState().fPlayer.myLevel*0.2);
+			
+			this.core3Base +=this.core3Base*0.3;
+
+			this.core3BaseCost = Math.round(this.core3Base+(this.core3Base*this.game.state.getCurrentState().fPlayer.myLevel*0.2));
+			
 			
 			this.game.state.getCurrentState().fPlayer.core3Level++;	
 			this.game.state.getCurrentState().shakeAndFlash();
-			
+			this.fCore3cost.text = this.core3BaseCost;
 		}else{
 
 			this.fCore3cost.text = 'xxx';

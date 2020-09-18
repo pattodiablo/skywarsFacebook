@@ -43,11 +43,10 @@ player.prototype.myCreate = function() {
 	
 	if(typeof this.game.playerLevel !== "undefined"  ){
 		this.myLevel = this.game.playerLevel;
-		this.levelCap = 1000*this.myLevel;
+	
 		
 	}else{
 		this.myLevel = 1;
-		this.levelCap=1000;
 	
 	}
 	
@@ -56,12 +55,12 @@ player.prototype.myCreate = function() {
 	}else{
 		this.coins = 29;
 	}
-	console.log('me llega ' + this.game.playerCore1)
+	
 	if(typeof this.game.playerCore1 !== "undefined" ){
-		console.log('core1generado');
+		
 		this.core1Level = this.game.playerCore1;
 	}else{
-		console.log('asignandoCore1');
+	
 		this.core1Level = 0;
 	}
 
@@ -79,8 +78,6 @@ player.prototype.myCreate = function() {
 
 
 
-console.log('playercorelevel ' + this.core1Level);
-
 	this.ExpPoints = 0;
 	
 	this.canJump =  false;	
@@ -96,7 +93,7 @@ console.log('playercorelevel ' + this.core1Level);
 	this.shootTimer = this.game.time.create(false);
 	this.currentFillLevel = 0;
 	this.totalLevelFill = 1000;
-
+	this.levelCap=1000;
    	this.myTimer = this.game.time.create(false);
     this.myTimer.loop(200, this.timerUpdate, this);
     this.myTimer.start();
@@ -153,7 +150,6 @@ player.prototype.getExp = function(comboHit) {
 		this.ExpPoints++;
 	}
 
-console.log(this.currentFillLevel);
 this.currentFillLevel = this.ExpPoints/this.totalLevelFill;
 
 	if(this.ExpPoints>=this.levelCap){
@@ -169,7 +165,7 @@ this.currentFillLevel = this.ExpPoints/this.totalLevelFill;
 		var core2Level = this.core2Level;
 		var core3Level = this.core3Level;
 	
-	this.game.state.getCurrentState().saveProgress(coins,level,core1Level,core2Level,core3Level,this.game,false);
+	this.game.state.getCurrentState().saveProgress(coins,level,core1Level,core2Level,core3Level,this.game);
 
 		}
 }

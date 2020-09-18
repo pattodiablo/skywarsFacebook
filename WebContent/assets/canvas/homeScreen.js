@@ -92,21 +92,21 @@ this.game.load.audio('upgrade', ['assets/audio/upgrade.mp3','assets/audio/upgrad
 
 var loaderOutline = this.game.add.graphics(0, 0); //copiar todo este codigo para generar la barra de carga automaticamente
 		
-		loaderOutline.beginFill(0x602530, 0.6); 
+		loaderOutline.beginFill(0xffffff, 1); 
 	    loaderOutline.moveTo(0,0);
 	    loaderOutline.lineTo(100, 0);
-	    loaderOutline.lineTo(100, 30);
-	    loaderOutline.lineTo(0, 30);
+	    loaderOutline.lineTo(100, 60);
+	    loaderOutline.lineTo(0, 60);
 	    loaderOutline.lineTo(0, 0);
 	    loaderOutline.endFill();
 
 	    var loaderOutline2 = this.game.add.graphics(0, 0);
 		
-		loaderOutline2.beginFill(0xc12354, 0.6); 
+		loaderOutline2.beginFill(0xf0522c, 1); 
 	    loaderOutline2.moveTo(0,0);
 	    loaderOutline2.lineTo(100, 0);
-	    loaderOutline2.lineTo(100, 25);
-	    loaderOutline2.lineTo(0, 25);
+	    loaderOutline2.lineTo(100, 55);
+	    loaderOutline2.lineTo(0, 55);
 	    loaderOutline2.lineTo(0, 0);
 	    loaderOutline2.endFill();
 
@@ -119,9 +119,8 @@ var loaderOutline = this.game.add.graphics(0, 0); //copiar todo este codigo para
         loaderContainer.y = this.game.world.centerY - 16;
 
 		var loadSprite = this.game.add.sprite(0,0, loaderOutline2.generateTexture());
-		   loaderOutline2.destroy();
+		loaderOutline2.destroy();
 
-		  //loadSprite.width = 100;
         loadSprite.x = this.game.world.centerX - loadSprite.width / 2;
         loadSprite.y = this.game.world.centerY - 14;
 
@@ -138,16 +137,24 @@ var loaderOutline = this.game.add.graphics(0, 0); //copiar todo este codigo para
 
 homeScreen.prototype.myCreate = function () {
 
-
 	this.fPlayBtn.inputEnabled =  true;
 	this.fPlayBtn.events.onInputDown.add(this.gameStart, this);
-
 	this.showHero = this.game.add.tween(this.fHeroHome);
-			this.showHero.to({y:0}, 1000, Phaser.Easing.Linear.None);
-			this.showHero.onComplete.add(this.showTitle,this)
-			this.showHero.start();
+	this.showHero.to({y:0}, 1000, Phaser.Easing.Linear.None);
+	this.showHero.onComplete.add(this.showTitle,this)
+	this.showHero.start();
+
+	this.fAlsoPlay.inputEnabled =  true;
+	this.fAlsoPlay.events.onInputDown.add(this.laucheOtherGame, this);
+
 }
 
+homeScreen.prototype.laucheOtherGame = function () {
+
+FBInstant.switchGameAsync('2668112503429040').catch(function (e) {
+  alert('cant load now');
+});
+}
 homeScreen.prototype.showTitle = function () {
 
 	this.showHeroTitle = this.game.add.tween(this.fGameTitle);

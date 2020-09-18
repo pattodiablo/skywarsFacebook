@@ -58,7 +58,7 @@ upgradeBtn.prototype.pullMenu = function () {
 	var core2Level = this.game.state.getCurrentState().fPlayer.core2Level;
 	var core3Level = this.game.state.getCurrentState().fPlayer.core3Level;
 	
-	this.game.state.getCurrentState().saveProgress(coins,level,core1Level,core2Level,core3Level,this.game,false);
+	this.game.state.getCurrentState().saveProgress(coins,level,core1Level,core2Level,core3Level,this.game);
 	
 	if(!this.menuOn){
 		console.log('core1Level ' + this.game.state.getCurrentState().fPlayer.core1Level);

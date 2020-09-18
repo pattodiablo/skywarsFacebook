@@ -95,7 +95,38 @@ finalScreen.prototype.shakeAndFlash = function () {
 
 finalScreen.prototype.gameStart = function () {
 
-	this.game.state.start("Level");
+
+		FBInstant.player
+		  .getStatsAsync(['coins','level','core1','core2','core3','timesDefeated'])
+		  .then(function(data) {
+
+	
+		    var coins = data['coins'];
+		    var level = data['level'];
+		    var core1 = data['core1'];
+		    var core2 = data['core2'];
+		    var core3 = data['core3'];
+		    var timesDefeated = data['timesDefeated'];
+
+			FBInstant.game.playerCoins = coins;
+			FBInstant.game.playerLevel = level;
+			FBInstant.game.playerCore1 = core1;
+			FBInstant.game.playerCore2 = core2;
+			FBInstant.game.playerCore3 = core3;
+			FBInstant.game.timesDefeated = timesDefeated;
+		
+			
+			
+
+		  }).then(function(data) {
+
+			FBInstant.game.state.start("Level");
+		  }).catch(function (e) {
+		 	console.log(e);
+		});
+
+
+	
 }
 
 finalScreen.prototype.showButton = function () {
