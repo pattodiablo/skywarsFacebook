@@ -76,9 +76,9 @@
               "info": {
                 "editorName": "returnText",
                 "editorField": true,
-                "x": 342,
+                "x": 309,
                 "y": 1020,
-                "text": "RETURN TO BASE",
+                "text": "BASE AND UPGRADES",
                 "style.fontSize": 40,
                 "style.fill": "#ffffff"
               }

@@ -31,6 +31,7 @@ homeScreen.prototype.init = function () {
 };
 
 homeScreen.prototype.preload = function () {
+
 	
 	this.load.pack('images', 'assets/pack.json');
 	this.load.pack('atlas', 'assets/pack.json');

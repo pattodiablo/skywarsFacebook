@@ -9,8 +9,7 @@
 /**
  * menuBg.
  * @param {Phaser.Game} aGame A reference to the currently running game.
- * @param {Phaser.Group} aParent The parent Group (or other {@link DisplayObject}) that this group will be added to.
-    If undefined/unspecified the Group will be added to the {@link Phaser.Game#world Game World}; if null the Group will not be added to any parent.
+ * @param {Phaser.Group} aParent The parent Group (or other {@link DisplayObject}) that this group will be added to.    If undefined/unspecified the Group will be added to the {@link Phaser.Game#world Game World}; if null the Group will not be added to any parent.
  * @param {string} aName A name for this group. Not used internally but useful for debugging.
  * @param {boolean} aAddToStage If true this group will be added directly to the Game.Stage instead of Game.World.
  * @param {boolean} aEnableBody If true all Sprites created with {@link #create} or {@link #createMulitple} will have a physics body created on them. Change the body type with {@link #physicsBodyType}.
@@ -25,7 +24,7 @@ function menuBg(aGame, aParent, aName, aAddToStage, aEnableBody, aPhysicsBodyTyp
 	var _buttonMenu = new upgradeBtn(this.game, 531.0, 1040.0);
 	this.add(_buttonMenu);
 	
-	var _returnText = this.game.add.text(342.0, 1020.0, 'RETURN TO BASE', {"font":"bold 40px Arial","fill":"#ffffff"}, this);
+	var _returnText = this.game.add.text(309.0, 1020.0, 'BASE AND UPGRADES', {"font":"bold 40px Arial","fill":"#ffffff"}, this);
 	
 	var _coins = this.game.add.text(387.0, 61.0, '0000', {"font":"bold 60px Arial","fill":"#683329"}, this);
 	

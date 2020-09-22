@@ -2,14 +2,58 @@ FBInstant.initializeAsync().then(function() {
 		
 		FBInstant.setLoadingProgress(100);
 		FBInstant.startGameAsync().then(function() {
-		
 
-	var playerPhoto = FBInstant.player.getPhoto();
-	var playerName= FBInstant.player.getName();
+		var playerPhoto = FBInstant.player.getPhoto();
+		var playerName= FBInstant.player.getName();
 	
 
 	function getProgress(){ //obtiene datos guardados de fbplayer
 		
+	FBInstant.player
+	.canSubscribeBotAsync()
+	.then(function(can_subscribe){
+		if (can_subscribe) {
+			 FBInstant.player.subscribeBotAsync()
+			 .then(function () {
+
+                       console.log('suscribed');
+
+                    })
+			 .catch(function (e) {
+
+                        console.log('not suscribed');
+
+                    })
+
+		}
+		
+	})
+	.catch(function (e) {
+
+                 console.log('cant suscribe');
+
+            });
+
+
+var connectedPlayers = FBInstant.player.getConnectedPlayersAsync()
+  .then(function(players) {
+    console.log(players.map(function(player) {
+      return {
+        id: player.getID(),
+        name: player.getName(),
+      }
+    }));
+  });
+
+  FBInstant.payments.getCatalogAsync().then(function (catalog) {
+  console.log(catalog); // [{productID: '12345', ...}, ...]
+});
+
+  console.log(FBInstant.getSupportedAPIs());
+const entryPointData = FBInstant.getEntryPointData();
+ console.log(entryPointData);
+
+ 
 
 		FBInstant.player
 		  .getStatsAsync(['coins','level','core1','core2','core3','timesDefeated'])
@@ -42,6 +86,12 @@ FBInstant.initializeAsync().then(function() {
 			game.state.add("Level", Level);
 			game.state.start("homeScreen");
 
+
+
+		var preloadedInterstitial = null;
+
+
+
 		  }).catch(function (e) {
 		 	console.log(e);
 		});
@@ -49,8 +99,37 @@ FBInstant.initializeAsync().then(function() {
 
 
 	}
-	
-	getProgress();
+
+	function getAads(){
+
+		FBInstant.getInterstitialAdAsync(
+		  '3006013049505434_3099765166796888' // Your Ad Placement Id
+		).then(function(interstitial) {
+		  // Load the Ad asynchronously
+		  preloadedInterstitial = interstitial;
+		  return preloadedInterstitial.loadAsync();
+		}).then(function() {
+		 
+
+			preloadedInterstitial.showAsync()
+		.then(function() {
+		  // Perform post-ad success operation
+		  console.log('Interstitial ad finished successfully');        
+		})
+		.catch(function(e) {
+		  console.error(e.message);
+		});
+
+
+		}).catch(function(err){
+		  console.error('Interstitial failed to preload: ' + err.message);
+		});
+		
+	}
+ getProgress();
+
+	// getAads();
+ 
 
   })
 	});
