@@ -1,8 +1,9 @@
+
 FBInstant.initializeAsync().then(function() {
 		
 		FBInstant.setLoadingProgress(100);
 		FBInstant.startGameAsync().then(function() {
-
+	
 		var playerPhoto = FBInstant.player.getPhoto();
 		var playerName= FBInstant.player.getName();
 	
@@ -16,12 +17,12 @@ FBInstant.initializeAsync().then(function() {
 			 FBInstant.player.subscribeBotAsync()
 			 .then(function () {
 
-                       console.log('suscribed');
+                       console.log('suscribed to bot');
 
                     })
 			 .catch(function (e) {
 
-                        console.log('not suscribed');
+                        console.log('not suscribed to bot');
 
                     })
 
@@ -30,26 +31,33 @@ FBInstant.initializeAsync().then(function() {
 	})
 	.catch(function (e) {
 
-                 console.log('cant suscribe');
+                 console.log('cant suscribe to bot');
 
             });
 
 
-var connectedPlayers = FBInstant.player.getConnectedPlayersAsync()
-  .then(function(players) {
-    console.log(players.map(function(player) {
-      return {
-        id: player.getID(),
-        name: player.getName(),
-      }
-    }));
-  });
+
+
+
+	var connectedPlayers = FBInstant.player.getConnectedPlayersAsync()
+	  .then(function(players) {
+	    console.log(players.map(function(player) {
+	      return {
+	        id: player.getID(),
+	        name: player.getName(),
+	      }
+	    }));
+	  });
+
+
+ 
+
 
   FBInstant.payments.getCatalogAsync().then(function (catalog) {
   console.log(catalog); // [{productID: '12345', ...}, ...]
 });
 
-  console.log(FBInstant.getSupportedAPIs());
+
 const entryPointData = FBInstant.getEntryPointData();
  console.log(entryPointData);
 
@@ -69,7 +77,7 @@ const entryPointData = FBInstant.getEntryPointData();
 
 	
 
-		    var game = new Phaser.Game(1920, 1080, Phaser.AUTO);
+		    var game = new Phaser.Game(1920, 1080, Phaser.AUTO, 'skywarsGame',false);
 		    FBInstant.game =  game;
 			game.musicOption=1;
 			game.finalScore = 0;
@@ -132,6 +140,21 @@ const entryPointData = FBInstant.getEntryPointData();
  
 
   })
+		var contextID = FBInstant.context.getID();
+		console.log('id ' + FBInstant.context.getID());
+
+		if(contextID !== null){
+
+			FBInstant.getLeaderboardAsync('goldCollected.'+contextID)
+		    .then(function(leaderboard) {
+		        return leaderboard.getEntriesAsync(count, start);
+		    }).then(function(entries) {
+		        // Score entries are returned in the entries array
+		    }).catch(function(error) {
+		        // Error retrieving scores
+		    });
+		}
+
 	});
 
 

@@ -66,7 +66,7 @@ Level.prototype.create = function () {
 	var _powerLabel = this.add.group();
 	_powerLabel.position.set(0.0, -595.0);
 	
-	var _powerText = this.add.text(64.0, 456.0, 'Double Jump', {"font":"bold 120px Arial","fill":"#ffffff","stroke":"#ffffff"}, _powerLabel);
+	var _powerText = this.add.text(64.0, 442.0, 'Double Jump', {"font":"bold 120px Arial","fill":"#ffffff","stroke":"#ffffff"}, _powerLabel);
 	
 	this.add.text(87.0, 397.0, 'You got', {"font":"bold 60px Arial","fill":"#ffffff","stroke":"#ffffff"}, _powerLabel);
 	
@@ -1070,7 +1070,7 @@ Level.prototype.resetProgress = function (coins,level,core1,core2,core3,game,isR
 			game.playerCore1 = 0;
 			game.playerCore2 = 0;
 			game.playerCore3 = 0;
-			game.state.start("homeScreen");
+			game.state.restart("homeScreen");
 
 
 
