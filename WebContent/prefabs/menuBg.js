@@ -9,7 +9,8 @@
 /**
  * menuBg.
  * @param {Phaser.Game} aGame A reference to the currently running game.
- * @param {Phaser.Group} aParent The parent Group (or other {@link DisplayObject}) that this group will be added to.    If undefined/unspecified the Group will be added to the {@link Phaser.Game#world Game World}; if null the Group will not be added to any parent.
+ * @param {Phaser.Group} aParent The parent Group (or other {@link DisplayObject}) that this group will be added to.
+    If undefined/unspecified the Group will be added to the {@link Phaser.Game#world Game World}; if null the Group will not be added to any parent.
  * @param {string} aName A name for this group. Not used internally but useful for debugging.
  * @param {boolean} aAddToStage If true this group will be added directly to the Game.Stage instead of Game.World.
  * @param {boolean} aEnableBody If true all Sprites created with {@link #create} or {@link #createMulitple} will have a physics body created on them. Change the body type with {@link #physicsBodyType}.
@@ -231,13 +232,12 @@ menuBg.prototype.updateCore1 =  function(){
 			this.fUpgradeSign1.frame++;
 			this.game.state.getCurrentState().fPlayer.coins -= this.core1BaseCost;
 
-			console.log('antes ' + this.core1BaseCost + 'core1Base: '+ this.core1Base);
+			
 
 			this.core1Base +=this.core1Base*0.3;
 
 			this.core1BaseCost = Math.round(this.core1Base+(this.core1Base*this.game.state.getCurrentState().fPlayer.myLevel*0.2));
-			console.log('despues ' + this.core1BaseCost);
-			
+		
 			this.game.state.getCurrentState().fPlayer.core1Level++;	
 			this.game.state.getCurrentState().shakeAndFlash();
 			this.fCore1cost.text = this.core1BaseCost;

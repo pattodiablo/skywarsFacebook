@@ -197,20 +197,20 @@ Level.prototype.bgMusicPlay = function () {
 	switch (this.randomSong){
 
 		case 1:
-			console.log('rola 1 selected!');
+			
 			this.BgMusic = 1;
 			BgMusic.play();
 		break;
 			
 
 		case 2:
-			console.log('rola 2 selected!');
+		
 			this.BgMusic = 2;
 			BgMusic2.play();
 		break;
 
 		default:
-			console.log('no rola selected');
+		
 		break;
 
 	}
@@ -326,7 +326,7 @@ Level.prototype.switchFX = function () {
 	},this);
 
 		fxEnabled = false;
-		console.log('fx disabled');
+
 		
 
 	}else{
@@ -340,7 +340,7 @@ Level.prototype.switchFX = function () {
 	
 		
 		fxEnabled = true;
-		console.log('fx enabled');
+
 	}
 
 

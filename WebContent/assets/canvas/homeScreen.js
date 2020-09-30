@@ -182,7 +182,7 @@ this.fBackground.visible = true;
 FBInstant.context
   .chooseAsync()
   .then(function() {
-    console.log('FB context ' + FBInstant.context.getID());
+ 
     
 
     	 FBInstant.getLeaderboardAsync('goldCollected.'+FBInstant.context.getID())

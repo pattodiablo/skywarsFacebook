@@ -79,7 +79,7 @@ alienEnemy.prototype.myCreate = function() {
 
 	this.damagePower = 1; //usar para probar destruccion del enemigo 1 es default
 
-console.log('times defeated ' + this.game.timesDefeated);
+
 	if(this.game.timesDefeated <=1 || typeof this.game.timesDefeated == 'undefined'){
 		this.life = 100
 	}else{
@@ -232,7 +232,7 @@ if(!this.isKilled){
 
 
 alienEnemy.prototype.getDamage = function(damage) {
-	console.log(this.life);
+
 	this.life-=damage;
 	if(this.life<=0){
 		this.life = 0;
@@ -252,7 +252,7 @@ alienEnemy.prototype.getDamage = function(damage) {
 		this.fEnemyBar.fEnemyLifeFull.scale.x=(this.life/100)/2;
 	}
 	
-	console.log('enemiLifescale ' + this.fEnemyBar.fEnemyLifeFull.scale.x);
+	
 }
 
 alienEnemy.prototype.leaveScreen = function() {
@@ -327,7 +327,7 @@ alienEnemy.prototype.destroyShip = function(time, distance) {
     this.destroyTimer.start();
 
     function destroying(){
-    	console.log('destroying');
+   
 		for(var i=0; i<=5; i++){
 
 			this.game.state.getCurrentState().createCoins(this.fEnemyShip.world.x,this.fEnemyShip.world.y,500,true);	

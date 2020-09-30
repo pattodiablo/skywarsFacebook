@@ -62,7 +62,7 @@ leaderboard.prototype.drawEntries = function (entries,panel) {
 
 		var ypos = 0 
 		var yPhotoPos = 0;
-		console.log('entries length' + entries.length);
+
 		if(entries.length>0){
 		entries.forEach(function(entrie) { 
 
@@ -72,9 +72,9 @@ leaderboard.prototype.drawEntries = function (entries,panel) {
 		this.game.load.image('playerImage.'+playerEntry.getName(),  playerEntry.getPhoto());
 		this.game.load.onLoadComplete.add(function(){
 
-			console.log('loading image ');
+
 			var fPlayerPhoto = this.game.add.sprite(0, 0, 'playerImage.'+playerEntry.getName());
-			console.log(fPlayerPhoto);
+		
 			this.add(fPlayerPhoto);
 			fPlayerPhoto.anchor.setTo(0.5);
 			fPlayerPhoto.scale.setTo(0.2);
@@ -85,7 +85,7 @@ leaderboard.prototype.drawEntries = function (entries,panel) {
 		this.game.load.start();
 
 		  	var contextPLayer = entrie.getPlayer();
-		  	console.log(contextPLayer.getName());
+		
 	
 			ypos+=100;
 

@@ -143,10 +143,10 @@ finalScreen.prototype.gameStart = function () {
 
 		  }).then(function(data) {
 		  	if(FBInstant.context.getID() !== null){
-		  		console.log('socore saved');
+		 
 		  		 FBInstant.getLeaderboardAsync('goldCollected.'+FBInstant.context.getID())
 				  .then(leaderboard => {
-				    console.log(leaderboard); // 'nombre de mi leaderboard'
+	
 
 					leaderboard.setScoreAsync(FBInstant.game.finalScore);
 				  

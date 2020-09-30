@@ -17,12 +17,12 @@ FBInstant.initializeAsync().then(function() {
 			 FBInstant.player.subscribeBotAsync()
 			 .then(function () {
 
-                       console.log('suscribed to bot');
+                    
 
                     })
 			 .catch(function (e) {
 
-                        console.log('not suscribed to bot');
+                
 
                     })
 
@@ -31,7 +31,7 @@ FBInstant.initializeAsync().then(function() {
 	})
 	.catch(function (e) {
 
-                 console.log('cant suscribe to bot');
+     
 
             });
 
@@ -39,27 +39,10 @@ FBInstant.initializeAsync().then(function() {
 
 
 
-	var connectedPlayers = FBInstant.player.getConnectedPlayersAsync()
-	  .then(function(players) {
-	    console.log(players.map(function(player) {
-	      return {
-	        id: player.getID(),
-	        name: player.getName(),
-	      }
-	    }));
-	  });
-
-
  
 
-
-  FBInstant.payments.getCatalogAsync().then(function (catalog) {
-  console.log(catalog); // [{productID: '12345', ...}, ...]
-});
-
-
 const entryPointData = FBInstant.getEntryPointData();
- console.log(entryPointData);
+
 
  
 
@@ -136,12 +119,12 @@ const entryPointData = FBInstant.getEntryPointData();
 	}
  getProgress();
 
-	// getAads();
+	 getAads();
  
 
   })
 		var contextID = FBInstant.context.getID();
-		console.log('id ' + FBInstant.context.getID());
+		
 
 		if(contextID !== null){
 
